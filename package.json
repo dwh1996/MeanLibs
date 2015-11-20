@@ -1,0 +1,19 @@
+{
+  "name": "meanlibs",
+  "version": "1.0.0",
+  "description": "watch your back hide yo kids",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mboothma/MeanLibs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mboothma/MeanLibs/issues"
+  },
+  "homepage": "https://github.com/mboothma/MeanLibs"
+}
