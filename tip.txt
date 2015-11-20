@@ -1,0 +1,15 @@
+Make change to file put into repository
+put into remote- origin
+git fetch - latest code
+git status - files changed
+git add nameoffile
+git status - make sure files to be committed are ready to be committed
+git commit -m message inside of ""
+git merge origin/master - will merge any files that were changed on remote\
+git push origin master - pushes changes to remote
+
+
+
+useful commands
+gitk - shows you every change to the repository
+gitk filename - changes for that one file 
