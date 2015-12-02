@@ -5,11 +5,11 @@ var Schema = mongoose.Schema;
 // Lib Schema
 var LibSchema = new Schema({
   userName: String,
-  libFirst: String,
-  libSecond: String,
-  libThird: String,
-  libFourth: String,
-  libFifth: String
+  lib1: String,
+  lib2: String,
+  lib3: String,
+  lib4: String,
+  lib5: String
 });
 
 // Return the model

@@ -35,19 +35,25 @@ app.post('/lib', function(req, res) {
 
   // Set the stuff in the lib
   thelib.userName = req.body.userName;
-  thelib.meanLib = req.body.meanLib;
+  thelib.lib1 = req.body.lib1;
+  thelib.lib2 = req.body.lib2;
+  thelib.lib3 = req.body.lib3;
+  thelib.lib4 = req.body.lib4;
+  thelib.lib5 = req.body.lib5;
 
   thelib.remove({userName: req.params.userName},
     function(err, user) {
   });
 
   thelib.save(function(err) {
+    if (err) res.send(err);
+
     res.json({message: 'Lib added'});
   });
 });
 
 app.get('/lib/:userName', function(req, res) {
-  User.findById(req.params.userName, function(err, lib) {
+  Lib.findOne({'userName': req.params.userName}, function(err, lib) {
     if (err) res.send(err);
 
     // Return the lib
@@ -63,4 +69,4 @@ app.get('*', function(req, res) {
 
 // Start the server
 app.listen(8080);
-console.log('Magic happens on port 8080');
+console.log('Port 8080');
