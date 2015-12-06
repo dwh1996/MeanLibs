@@ -4,7 +4,7 @@ var app = express(); // Define our app using express
 var bodyParser = require('body-parser'); // Get body-parser
 var morgan = require('morgan'); // Used to see requests
 var mongoose = require('mongoose'); // For working w/ our database
-var Lib = require('lib.js');
+var Lib = require('./lib.js');
 
 // App Configuration
 // Use body parser so we can grab information from POST requests
@@ -34,18 +34,30 @@ app.post('/lib', function(req, res) {
   var thelib = new Lib();
 
   // Set the stuff in the lib
-  thelib.firstWord = req.body.firstWord;
-  thelib.secondWord = req.body.secondWord;
-  thelib.thirdWord = req.body.thirdWord;
-  thelib.fourthWord = req.body.fourthWord;
-  thelib.fifthWord = req.body.fifthWord;
+  thelib.userName = req.body.userName;
+  thelib.lib1 = req.body.lib1;
+  thelib.lib2 = req.body.lib2;
+  thelib.lib3 = req.body.lib3;
+  thelib.lib4 = req.body.lib4;
+  thelib.lib5 = req.body.lib5;
 
-  User.find(function(err, libs) {
+  thelib.remove({userName: req.params.userName},
+    function(err, user) {
+  });
+
+  thelib.save(function(err) {
     if (err) res.send(err);
 
-    // Return the whole thing of text
-    res.json(libs[0] + thelib.firstWord + libs[1] + thelib.secondWord + libs[2] +
-            thelib.thirdWord + libs[3] + thelib.fourthWord + libs[4] + thelib.fifthWord + libs[5]);
+    res.json({message: 'Lib added'});
+  });
+});
+
+app.get('/lib/:userName', function(req, res) {
+  Lib.findOne({'userName': req.params.userName}, function(err, lib) {
+    if (err) res.send(err);
+
+    // Return the lib
+    res.json(lib);
   });
 });
 
@@ -57,4 +69,4 @@ app.get('*', function(req, res) {
 
 // Start the server
 app.listen(8080);
-console.log('Magic happens on port 8080');
+console.log('Port 8080');

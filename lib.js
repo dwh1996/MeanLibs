@@ -1,15 +1,15 @@
-// Grab the packages that we need for the user model
+// Grab the packages that we need for the lib model
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var bcrypt = require('bcrypt-nodejs');
 
-// User Schema
+// Lib Schema
 var LibSchema = new Schema({
-  firstWord: String,
-  secondWord: String,
-  thirdWord: String,
-  fourthWord: String,
-  fifthWord: String
+  userName: String,
+  lib1: String,
+  lib2: String,
+  lib3: String,
+  lib4: String,
+  lib5: String
 });
 
 // Return the model
