@@ -26,4 +26,16 @@ angular.module('firstApp', [])
     // After our computer has been added, clear the form
     vm.libData = {};
   };
+
+  vm.getLib = function() {
+    $http.get('http://localhost:8080/lib/' + vm.libData.userName)
+    .then(function(result) {
+      vm.libData.userName = result.data.userName;
+      vm.libData.lib1 = result.data.lib1;
+      vm.libData.lib2 = result.data.lib2;
+      vm.libData.lib3 = result.data.lib3;
+      vm.libData.lib4 = result.data.lib4;
+      vm.libData.lib5 = result.data.lib5;
+    });
+  };
 });
