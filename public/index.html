@@ -1,29 +1,36 @@
 <!doctype html>
 <html lang="en">
-<link href='http://fonts.googleapis.com/css?family=Lobster|Raleway:400,200' rel='stylesheet' type='text/css'>
+<link href="http://fonts.googleapis.com/css?family=Lobster|Raleway:400,200" rel="stylesheet" type="text/css">
 <head>
   <title>Mean Libs</title>
+
+  <!-- JS -->
+  <!-- Load angular and our custom application -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+  <script src="app.js"></script>
 </head>
-<body>
+<body ng-app="firstApp" ng-controller="mainController as main">
   <h1>Mean Libs</h1>
-  <h4>Name:  <input type="text" name="name" value=" "><p>    <input type="button" value="Load" class="call"></h4>
+  <form ng-submit="main.addLib()">
+  <h4>Name:  <input type="text" value=" " placeholder="username" ng-model="main.libData.userName"><p>    <input type="button" value="Load" class="call"></h4>
 
    It was a bright and sun-shiny day here at Villanova.You are on your way to A breakfast.
    But, in the crevices of the Mendel ground-floor lied a secret.
-   All of a sudden the lights went out and <input type="text" name="firstword" value = "name"> zoomed down the
-   hallway to find <input type="text" name="secondword" value = "thing">,
+   All of a sudden the lights went out and <input type="text" name="firstword" placeholder = "name" ng-model="main.libData.lib1"> zoomed down the
+   hallway to find <input type="text" name="secondword" placeholder = "thing" ng-model="main.libData.lib2">,
    something that would give even Dr. Joyce the willies.
    There was no noise except the tojaroni "shh".
-   Suddenly confronted by the tojaroni covered in <input type="text" name="thirdword" value = "substance">.
+   Suddenly confronted by the tojaroni covered in <input type="text" name="thirdword" placeholder = "substance" ng-model="main.libData.lib3">.
    They had to act quickly.
    To defend themselves they reached into
-   one of the crevices to find a miniature <input type="text" name="forthword" value = "object">.
+   one of the crevices to find a miniature <input type="text" name="forthword" placeholder = "object" ng-model="main.libData.lib4">.
    The tojaroni pounced daintily but he was utterly powerless.
-   lol. Fully aware that the toj was basically  <input type="text" name="fifthword" value = "adjective">you
+   lol. Fully aware that the toj was basically  <input type="text" name="fifthword" placeholder = "adjective" ng-model="main.libData.lib5">you
     figured enough was enough and decided to set all his booleans to false and head upstate.
     <br/>
     <br/>
-    <input type="submit" class="call"></input>
+    <input type="submit" class="call">
+  </form>
 </body>
 </html>
 
