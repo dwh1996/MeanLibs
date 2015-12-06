@@ -12,4 +12,4 @@ git push origin master - pushes changes to remote
 
 useful commands
 gitk - shows you every change to the repository
-gitk filename - changes for that one file 
+gitk filename - changes for that one file
