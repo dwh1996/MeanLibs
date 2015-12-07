@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 app.use(morgan('dev'));
 
 // Connect to our database
-mongoose.connect('localhost:27017/test');
+mongoose.connect('mongodb://dwh1996:compsci 4 lyfe@ds037244.mongolab.com:37244/heroku_dmb094g3');
 
 // Set static files location
 // Used for requests that our frontend will make
