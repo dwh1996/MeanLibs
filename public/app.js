@@ -23,8 +23,7 @@ angular.module('firstApp', [])
       'lib5' : vm.libData.lib5
     });
 
-    // After our computer has been added, clear the form
-    vm.libData = {};
+    vm.libData = {'userName' : vm.libData.userName};
   };
 
   vm.getLib = function() {
