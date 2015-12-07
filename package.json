@@ -1,6 +1,9 @@
 {
   "name": "meanlibs",
   "version": "1.0.0",
+  "engines": {
+    "node": "4.2.1"
+  },
   "description": "watch your back hide yo kids",
   "main": "server.js",
   "scripts": {
@@ -8,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mboothma/MeanLibs.git"
+    "url": "https://github.com/dwh1996/MeanLibs.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mboothma/MeanLibs/issues"
+    "url": "https://github.com/dwh1996/MeanLibs/issues"
   },
-  "homepage": "https://github.com/mboothma/MeanLibs"
+  "homepage": "https://github.com/dwh1996/MeanLibs"
 }
