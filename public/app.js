@@ -14,7 +14,7 @@ angular.module('firstApp', [])
 
   vm.addLib = function() {
     // Add a lib to the database
-    $http.post('http://localhost:8080/lib', {
+    $http.post('https://lit-reef-4303.herokuapp.com/lib', {
       'userName' : vm.libData.userName,
       'lib1' : vm.libData.lib1,
       'lib2' : vm.libData.lib2,
@@ -27,7 +27,7 @@ angular.module('firstApp', [])
   };
 
   vm.getLib = function() {
-    $http.get('http://localhost:8080/lib/' + vm.libData.userName)
+    $http.get('https://lit-reef-4303.herokuapp.com/lib/' + vm.libData.userName)
     .then(function(result) {
       vm.libData.userName = result.data.userName;
       vm.libData.lib1 = result.data.lib1;
